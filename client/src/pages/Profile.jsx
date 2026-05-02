@@ -129,7 +129,7 @@ const Profile = () => {
             <div style={styles.profileImageContainer}>
               {user.profileImage ? (
                 <img
-                  src={`http://localhost:3000${user.profileImage}`}
+                  src={`${import.meta.env.VITE_SERVER_BASE_URL}${user.profileImage}`}
                   alt="profile"
                   style={styles.profileImage}
                 />
@@ -301,7 +301,7 @@ const Profile = () => {
                 {user.images.map((img, i) => (
                   <div key={i} style={styles.galleryItem}>
                     <img
-                      src={`http://localhost:3000${img}`}
+                      src={`${import.meta.env.VITE_SERVER_BASE_URL}${img}`}
                       alt={`Upload ${i + 1}`}
                       style={styles.galleryImage}
                     />

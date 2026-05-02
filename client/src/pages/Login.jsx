@@ -17,7 +17,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLinkedInLogin = () => {
-    window.location.href = "http://localhost:3000/api/auth/linkedin";
+    window.location.href = import.meta.env.VITE_LINKEDIN_AUTH_URL;
   };
 
   const onSubmit = async (data) => {

@@ -302,7 +302,7 @@ const AdminDashboard = () => {
                       {u.profileImage ? (
                         <>
                           <img
-                            src={`http://localhost:3000${u.profileImage}`}
+                            src={`${import.meta.env.VITE_SERVER_BASE_URL}${u.profileImage}`}
                             alt={u.name}
                             style={styles.userImage}
                           />
@@ -415,7 +415,7 @@ const AdminDashboard = () => {
                 <div style={styles.modalAvatar}>
                   {editingUser.profileImage ? (
                     <img
-                      src={`http://localhost:3000${editingUser.profileImage}`}
+                      src={`${import.meta.env.VITE_SERVER_BASE_URL}${editingUser.profileImage}`}
                       alt={editingUser.name}
                       style={styles.modalAvatarImg}
                     />

@@ -9,7 +9,7 @@ new LinkedInStrategy(
   {
     clientID: process.env.LINKEDIN_CLIENT_ID,
     clientSecret: process.env.LINKEDIN_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/api/auth/linkedin/callback",
+    callbackURL: process.env.LINKEDIN_REDIRECT_URI,
     scope: ["openid", "profile", "email"],
   },
 
